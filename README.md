@@ -190,25 +190,10 @@ The application uses a single `Product` model with the following fields:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## 🆘 Support
 
 If you encounter any issues or have questions:
 
-1. Check the [Issues](https://github.com/your-repo/issues) page
+1. Check the [Issues](https://github.com/AhmedQeshta/inventory-management-app/issues) page
 2. Create a new issue with detailed information
 3. Include error messages and steps to reproduce
-
-## 🔮 Future Enhancements
-
-- [ ] Product categories and tags
-- [ ] Bulk import/export functionality
-- [ ] Advanced reporting and analytics
-- [ ] Barcode scanning support
-- [ ] Multi-location inventory tracking
-- [ ] Supplier management
-- [ ] Purchase order tracking
-- [ ] API endpoints for external integrations
