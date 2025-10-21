@@ -1,5 +1,10 @@
+interface Product {
+  createdAt: Date;
+  quantity: number;
+}
+
 // weekly Products Chart
-export function WeeklyProducts(allProducts: any[]) {
+export function WeeklyProducts(allProducts: Product[]) {
   const now = new Date();
   const weeklyProductsData = [];
   for (let i = 11; i >= 0; i--) {
@@ -29,7 +34,12 @@ export function WeeklyProducts(allProducts: any[]) {
   return weeklyProductsData;
 }
 
-export function Stock({ allProducts, totalProducts }: any) {
+interface StockProps {
+  allProducts: Product[];
+  totalProducts: number;
+}
+
+export function Stock({ allProducts, totalProducts }: StockProps) {
   const inStockCount = allProducts.filter((p) => Number(p.quantity) > 5).length;
   const lowStockCount = allProducts.filter(
     (p) => Number(p.quantity) <= 5 && Number(p.quantity) >= 1,
@@ -45,7 +55,12 @@ export function Stock({ allProducts, totalProducts }: any) {
   return { inStockPercentage, lowStockPercentage, outOfStockPercentage };
 }
 
-export function CalcTotalValue(allProducts: any[]) {
+interface ProductWithPrice {
+  price: number | string | { toString(): string };
+  quantity: number;
+}
+
+export function CalcTotalValue(allProducts: ProductWithPrice[]) {
   return allProducts.reduce(
     (sum, product) => sum + Number(product.price) * Number(product.quantity),
     0,

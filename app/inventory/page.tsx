@@ -4,7 +4,6 @@ import { deleteProduct } from '@/lib/actions/products';
 import { getCurrentUser } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { IInventoryProps } from '@/lib/types';
-import { Suspense } from 'react';
 
 export default async function Inventory({ searchParams }: IInventoryProps) {
   const user = await getCurrentUser();

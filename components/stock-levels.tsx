@@ -1,4 +1,15 @@
-export default function StockLevels({ recentProducts }: any) {
+interface Product {
+  id: string;
+  name: string;
+  quantity: number;
+  lowStockAt: number | null;
+}
+
+interface StockLevelsProps {
+  recentProducts: Product[];
+}
+
+export default function StockLevels({ recentProducts }: StockLevelsProps) {
   return (
     <div className="bg-white rounded-lg border border-gray-200 p-6">
       <div className="flex items-center justify-between mb-6">
